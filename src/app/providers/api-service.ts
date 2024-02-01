@@ -7,5 +7,5 @@ const fetchMovies = async () => {
 };
 
 export const useMovies = () => {
-    return useQuery('movies', fetchMovies);
+    return useQuery( 'movies', fetchMovies);
 }
