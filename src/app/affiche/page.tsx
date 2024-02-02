@@ -25,7 +25,10 @@ interface filmCard {
     originalName: string,
     releaseDate: string,
     runtime: string,
-    userRatings: Array<any>,
+    userRatings: {
+        kinopoisk: string,
+        imdb: string
+    },
 }
 
 export default function Affiche() {
@@ -50,7 +53,10 @@ export default function Affiche() {
             originalName: '',
             releaseDate: '',
             runtime: '',
-            userRatings: [],
+            userRatings: {
+                kinopoisk: '',
+                imdb: ''
+            },
         }
 
         card.actors = data.films[i].actors;
