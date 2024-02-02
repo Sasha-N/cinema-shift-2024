@@ -5,7 +5,7 @@ import exit from '../app/icons/exit.png';
 import Image from 'next/image';
 import styles from './page.module.css'
 import "./globals.css";
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const queryClient = new QueryClient();
 
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <QueryClientProvider client={queryClient}>
         <body>
           <div className={styles.nav}>
