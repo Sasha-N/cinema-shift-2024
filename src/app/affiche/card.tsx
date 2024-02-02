@@ -20,7 +20,7 @@ interface filmCard {
     },
 }
 
-export default function Card(filmCard: filmCard) {
+export default function Card({ filmCard }: { filmCard: filmCard }) {
     const URL = `https://shift-backend.onrender.com` + filmCard.img;
     const style = {
         background: "url(" + URL + ")" + ", lightgray 50% / cover no-repeat",

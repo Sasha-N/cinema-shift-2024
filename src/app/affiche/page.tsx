@@ -2,7 +2,7 @@
 
 import { fetchMovies } from '../providers/api-service';
 import { useQuery } from '@tanstack/react-query'
-import  Card from '../affiche/card';
+import Card from '../affiche/card';
 import styles from './page.module.css'
 
 const useMovies = () => {
@@ -80,7 +80,7 @@ export default function Affiche() {
     return (
         <div className={styles.container}>
         {
-           cards.map(card => <Card key={card.id} {...card} />)
+           cards.map(card => <Card key={card.id} filmCard={card} />)
         }
         </div>
     
