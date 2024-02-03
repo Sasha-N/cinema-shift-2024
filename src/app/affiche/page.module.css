@@ -40,11 +40,11 @@
 }
 
 .label {
-    width: 136px;
+    width: 100px;
     height: 46px;
     border-radius: 6px 6px 0px 0px;
-    background: var(--label);
-    color: var(--white, #FFF);
+    background: #949494;
+    color:  #FFF;
     text-align: center;
     font-family: Roboto;
     font-size: 14px;
@@ -64,11 +64,14 @@
 }
 
 .cover {
+    display: flex;
     width: 212px;
     height: 288px;
     border-radius: 8px;
     background-size: 100% 100%;
     background-image: lightgray 50% / cover no-repeat;
+    flex-direction: row-reverse;
+    align-items: flex-end;
 }
 
 .description {
@@ -82,7 +85,7 @@
 }
 
 .name {
-    color: var(--darkgrey, #252525);
+    color: #252525;
     margin: 0;
     font-size: 20px;
     font-weight: 700;
@@ -91,7 +94,7 @@
 }
 
 .original_name {
-    color: var(--lightgrey, #949494);
+    color: #949494;
     margin: 0;
     font-size: 15px;
     font-weight: 400;
