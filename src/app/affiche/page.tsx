@@ -3,7 +3,7 @@
 import { fetchMovies } from '../providers/api-service';
 import { useQuery } from '@tanstack/react-query'
 import Card from '../affiche/card';
-import styles from './page.module.css'
+import styles from './page.module.css';
 
 const useMovies = () => {
     return useQuery({

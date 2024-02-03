@@ -3,6 +3,7 @@
 import { fetchMovieById } from '../providers/api-service';
 import { useQuery } from '@tanstack/react-query'
 import Card from '../affiche/card';
+import styles from './page.module.css';
 
 const useFilm = (id: string) => {
     return useQuery({
@@ -71,7 +72,7 @@ export default function Movie(param: any) {
     }
 
     return (
-        <div>
+        <div className={styles.container}>
          <Card filmCard={card} />
         </div>
     )

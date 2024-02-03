@@ -22,17 +22,13 @@ interface filmCard {
 
 export default function Card({ filmCard }: { filmCard: filmCard }) {
     const URL = `https://shift-backend.onrender.com` + filmCard.img;
-    const style = {
-        background: "url(" + URL + ")" + ", lightgray 50% / cover no-repeat",
-        backgroundSize: "100% 100%",
-    };
     return (
         <div className={styles.container_card}>
             <div className={styles.label}>
                 <p className={styles.genre}>{filmCard.genres}</p>
                 <p className={styles.release}>{filmCard.releaseDate}</p>
             </div>
-            <div className={styles.cover} style={style}></div>
+            <div className={styles.cover} style={{backgroundImage:"url(" + URL + ")"}}></div>
             <div className={styles.description}>
                 <p className={styles.name}>{filmCard.name}</p>
                 <p className={styles.rating}>Кинопоиск: {filmCard.userRatings.kinopoisk}</p>
