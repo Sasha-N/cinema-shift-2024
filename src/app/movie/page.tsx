@@ -31,7 +31,7 @@ interface filmCard {
     },
 }
 
-export default function Movie(param: any) { 
+export default function Movie(param: any) {
     let id = param.searchParams.id
     const { data } = useFilm(id);
 
@@ -55,7 +55,7 @@ export default function Movie(param: any) {
     }
 
     if (data) {
-  
+
         card.actors = data.film.actors;
         card.ageRating = data.film.ageRating;
         card.country = data.film.country;
@@ -73,7 +73,15 @@ export default function Movie(param: any) {
 
     return (
         <div className={styles.container}>
-         <Card filmCard={card} />
+            <Card filmCard={card} />
+            <div className={styles.container_description}>
+                <div className={styles.title}>{card.name}</div>
+                <p className={styles.rating}>Кинопоиск: {card.userRatings.kinopoisk}</p>
+                <p className={styles.rating}>IMDb: {card.userRatings.imdb}</p>
+                <p className={styles.subtitle}>Рейтинг: {card.ageRating}</p>
+                <p className={styles.subtitle}>Продолжительность: {card.runtime} мин</p>
+                <div className={styles.description}>{card.description}</div>
+            </div>
         </div>
     )
 }
