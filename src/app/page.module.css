@@ -33,3 +33,22 @@
   height: 40px;
   background-color: transparent;
 }
+
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.overlay {
+  position: fixed;
+  top: 170px;
+  left: 500px;
+  color: white;
+  font-size: 48px;
+}
+
+.video:hover {
+  cursor: pointer;
+}
